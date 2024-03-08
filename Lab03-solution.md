@@ -1,4 +1,4 @@
-## Exercise 2
+# Exercise 2
 
 1. **Look briefly at the chapters of Java Language Specification related to:**
 
@@ -18,7 +18,7 @@
 5. **Add exception handling to the StackOfInts:**
    Exception handling can be added to `StackOfInts` by using `try-catch` blocks where exceptions might occur (e.g., when accessing elements in an empty stack) and by throwing appropriate exceptions when illegal operations are performed.
 
-## Exercise 3
+# Exercise 3
 
 1. **Look briefly at the chapter of Java Language Specification related to `try-with-resources`:**
    The `try-with-resources` statement allows for the declaration of one or more resources to be used in a try block with the assurance that the resources will be closed automatically after the execution of the try block. A resource is an object that must be closed after the program is finished with it. This statement ensures that each resource is closed at the end of the statement.
@@ -29,7 +29,7 @@
 3. **Refactor the source code to `one file-one class` structure:**
    To refactor the code to a `one file-one class` structure, each class should be separated into its own file. This is a standard practice in Java for better organization and to avoid any naming conflicts or readability issues.
 
-## Exercise 4
+# Exercise 4
 
 1. **Look briefly at the content of files: `Console.java`, `System.java`, and `Scanner.java`**
    - `Console.java` is a class providing methods to interact with the user console.
@@ -70,7 +70,7 @@ public static int countLines(String filePath) throws IOException {
 }
 ```
 
-## 3. Write a function that concatenates two given files
+# 3. Write a function that concatenates two given files
 
 ```java
 
@@ -205,7 +205,7 @@ public class ExecutionTracker {
 3. **Serializable Interface (lst03_09)**:
    The third file addresses serialization with the `Serializable` interface. Several classes show how serialization is achieved, including the management of non-serializable fields with the `transient` keyword and the serialization of an object with a serializable superclass.
 
-## Exercise 8 : Mini project 03_01 ( ex03_01 )
+# Exercise 8 : Mini project 03_01 ( ex03_01 )
 
 # 1. 
 
