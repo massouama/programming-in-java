@@ -142,8 +142,6 @@ public static void replaceTabsWithSpaces(String filePath) throws IOException {
 
 # Exercise 6
 
-# Java Classes for File Handling
-
 1. Explain briefly the applications of the following classes:
    - `BufferedReader`: Used to read text from an input stream, buffering characters to provide efficient reading of characters, arrays, and lines.
    - `BufferedWriter`: Used to write text to an output stream, buffering characters to provide efficient writing.
