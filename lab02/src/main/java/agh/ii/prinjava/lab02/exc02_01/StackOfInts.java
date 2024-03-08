@@ -13,6 +13,7 @@ public interface StackOfInts {
         return numOfElems() == 0;
     }
 
+
     int numOfElems();
 
     int peek();

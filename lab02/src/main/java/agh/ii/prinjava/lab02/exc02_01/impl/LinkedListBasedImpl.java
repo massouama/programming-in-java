@@ -4,19 +4,24 @@ import agh.ii.prinjava.lab02.exc02_01.StackOfInts;
 
 public class LinkedListBasedImpl implements StackOfInts {
 
+    private Node first = null;
+    private int numOfElems = 0;
 
     @Override
     public int pop() {
-        throw new IllegalStateException("To be implemented");
+        if (first == null) {
+            throw new IllegalStateException("Cannot pop from an empty stack");
+        }
+        int elem = first.elem;
+        first = first.next;
+        numOfElems--;
+        return elem;
     }
 
-    /**
-     *
-     * @param x
-     */
     @Override
     public void push(int x) {
-        throw new IllegalStateException("To be implemented");
+        first = new Node(x, first);
+        numOfElems++;
     }
 
     @Override
@@ -26,7 +31,10 @@ public class LinkedListBasedImpl implements StackOfInts {
 
     @Override
     public int peek() {
-        throw new IllegalStateException("To be implemented");
+        if (first == null) {
+            throw new IllegalStateException("Cannot peek at an empty stack");
+        }
+        return first.elem;
     }
 
     private static class Node {
@@ -38,7 +46,4 @@ public class LinkedListBasedImpl implements StackOfInts {
             this.next = next;
         }
     }
-
-    private Node first = null;
-    private int numOfElems = 0;
 }

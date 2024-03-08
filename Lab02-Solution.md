@@ -1,8 +1,8 @@
 # Answers to Questions about Java
 
 ## 1 Revision of the Java
-angage specifications
-Done
+
+- Done
 
 ## 2. Advantages of using constants in programming
 - Code security**: constants cannot be modified once initialized, which helps prevent accidental changes to values that shouldn't change.
@@ -650,6 +650,51 @@ public class ArrayBasedImplTest {
 
 ```java
 
+public class ArrayBasedImpl implements StackOfInts {
+    private int[] stack;
+    private int numOfElems = 0;
+    private int capacity = 10; // Initial capacity
+
+    public ArrayBasedImpl() {
+        stack = new int[capacity];
+    }
+
+    @Override
+    public int pop() {
+        if (numOfElems == 0) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        return stack[--numOfElems];
+    }
+
+    @Override
+    public void push(int x) {
+        if (numOfElems == capacity) {
+            resize();
+        }
+        stack[numOfElems++] = x;
+    }
+
+    private void resize() {
+        capacity *= 2;
+        int[] newStack = new int[capacity];
+        System.arraycopy(stack, 0, newStack, 0, stack.length);
+        stack = newStack;
+    }
+
+    @Override
+    public int numOfElems() {
+        return numOfElems;
+    }
+
+    @Override
+    public int peek() {
+        if (numOfElems == 0) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        return stack[numOfElems - 1];
+    }
+}
 
 
 ```
