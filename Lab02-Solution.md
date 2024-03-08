@@ -112,8 +112,6 @@ Translated with DeepL.com (free version)
 
 ## Exercise 4
 
-# Java Programming Exercises
-
 ## Exercise Analysis and Responses
 
 1. **Explain the main differences between abstract classes and interfaces in Java:**
